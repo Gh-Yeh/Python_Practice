@@ -29,7 +29,7 @@ if input("Enter your password: ") == pwd:
                 print("Insufficient funds or invalid amount entered.")
                 Failed_withdraws += 1
             if Failed_withdraws > 3:
-                print("Too many failed withdrawal attempts. Exiting...")
+                print("Too many failed withdrawal attempts !!")
         elif option == 4:
             print("Exiting the program. Thank you!")
             print(f"Total transactions made: {transaction_count}")
