@@ -4,14 +4,19 @@ option = 0
 transaction_count = 0
 Failed_withdraws = 0
 pwd = "1234"
+
+# Validating password
 if input("Enter your password: ") == pwd:
+    # Main loop for the ATM program
     while option != 4:
         print("1. Check Balance")
         print("2. Deposit Money")
         print("3. Withdraw Money")
         print("4. Exit")
 
+        # Prompt user for an option
         option = int(input("Select an option: "))
+        # Validate option input
         if option == 1:
             print(f"Your current balance is: ${balance_amount}")
         elif option == 2:
