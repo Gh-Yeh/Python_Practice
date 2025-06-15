@@ -1,4 +1,4 @@
-x = 1000
+balance_amount = 1000
 
 option = 0
 transaction_count = 0
@@ -13,18 +13,25 @@ if input("Enter your password: ") == pwd:
 
         option = int(input("Select an option: "))
         if option == 1:
-            print(f"Your current balance is: ${x}")
+            print(f"Your current balance is: ${balance_amount}")
         elif option == 2:
             deposit = int(input("Enter the amount to deposit: "))
-            x += deposit
+            if deposit <= 0:
+                print("Deposit amount must be greater than zero.")
+                continue
+            balance_amount += deposit
             transaction_count += 1
-            print(f"You have deposited ${deposit}. Your new balance is: ${x}")
+            print(
+                f"You have deposited ${deposit}. Your new balance is: ${balance_amount}"
+            )
         elif option == 3:
             withdraw = int(input("Enter the amount to withdraw: "))
-            if 0 < withdraw <= x:
-                x -= withdraw
+            if 0 < withdraw <= balance_amount:
+                balance_amount -= withdraw
                 transaction_count += 1
-                print(f"You have withdrawn ${withdraw}. Your new balance is: ${x}")
+                print(
+                    f"You have withdrawn ${withdraw}. Your new balance is: ${balance_amount}"
+                )
             else:
                 print("Insufficient funds or invalid amount entered.")
                 Failed_withdraws += 1
