@@ -15,3 +15,12 @@ while option != 4:
         deposit = int(input("Enter the amount to deposit: "))
         x += deposit
         print(f"You have deposited ${deposit}. Your new balance is: ${x}")
+    elif option == 3:
+        withdraw = int(input("Enter the amount to withdraw: "))
+        if withdraw > x:
+            print("Insufficient funds.")
+        else:
+            x -= withdraw
+            print(f"You have withdrawn ${withdraw}. Your new balance is: ${x}")
+    elif option == 4:
+        print("Exiting the program. Thank you!")
