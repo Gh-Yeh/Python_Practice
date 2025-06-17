@@ -19,6 +19,7 @@ if input("Enter your password: ") == pwd:
         # Validate option input
         if option == 1:
             print(f"Your current balance is: ${balance_amount}")
+
         elif option == 2:
             deposit = int(input("Enter the amount to deposit: "))
             if deposit <= 0:
@@ -29,6 +30,7 @@ if input("Enter your password: ") == pwd:
             print(
                 f"You have deposited ${deposit}. Your new balance is: ${balance_amount}"
             )
+
         elif option == 3:
             withdraw = int(input("Enter the amount to withdraw: "))
             if 0 < withdraw <= balance_amount:
@@ -42,6 +44,7 @@ if input("Enter your password: ") == pwd:
                 Failed_withdraws += 1
             if Failed_withdraws > 3:
                 print("Too many failed withdrawal attempts !!")
+
         elif option == 4:
             print("Exiting the program. Thank you!")
             print(f"Total transactions made: {transaction_count}")
